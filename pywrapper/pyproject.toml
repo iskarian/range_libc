@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=64", "Cython>=3.0", "numpy"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "range_libc"
+version = "0.1.0"
+description = "Fast 2D ray casting for occupancy grids (CDDT, ray marching, bresenham, GLT)"
+license = "Apache-2.0"
+requires-python = ">=3.8"
+dependencies = ["numpy"]
+
+# The package is a single compiled module (range_libc), built from setup.py.
+# Turn off auto-discovery so setuptools does not treat the data folders
+# (maps, media, vendor, ...) as Python packages.
+[tool.setuptools]
+py-modules = []
+packages = []
